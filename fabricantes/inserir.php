@@ -1,3 +1,13 @@
+<?php
+    //se o botão inserir do formulário for acionado (ou seja, ele passará a estar definido ou existir)
+    if(isset($_POST['inserir'])){
+        require "../includes/funcoes-fabricantes.php";
+        $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
+
+        inserirFabricante($conexao, $nome);
+        header("location:listar.php"); //relacionamento
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
