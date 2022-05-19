@@ -1,9 +1,9 @@
 <?php
     //Parâmetros do servidor de BD
-    $servidor = "localhost";
+    $servidor = "localhost"; //endereço do banco de dados
     $usuario = "root";
     $senha = ""; 
-    $banco = "vendas_laise";
+    $banco = "vendas_laise"; //nome do banco de dados
 
     //Conectando ao servidor
     $conexao = mysqli_connect($servidor, $usuario, $senha, $banco);
