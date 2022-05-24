@@ -26,7 +26,7 @@
 
     function lerUmProduto($conexao, $id){
         //Montagem do comando SQL com parâmetro id
-        $sql = "SELECT id, nome FROM produto WHERE id = $id";
+        $sql = "SELECT id, nome, preco, quantidade, descricao, fabricante_id FROM produtos WHERE id = $id";
 
         //Execução do comando e armazenamento do resultado
         $resultado = mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
