@@ -8,7 +8,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title> Fabricantes | SELECT - CRUD com PHP e MySQL </title>
-<link href="../css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -21,9 +22,9 @@
 <div class="container">
     
     <h2>Lendo e carregando todos os fabricantes</h2>
-    <p><a href="inserir.php">Inserir</a></p>    
+    <p><a href="inserir.php" class="btn btn-primary">Inserir</a></p>    
 
-    <table>
+    <table class="table table-stripped">
         <caption> Lista de Fabricantes </caption>
         <thead>
             <tr>
@@ -39,8 +40,8 @@
                 <td><?=$fabricante["id"]?></td>
                 <td><?=$fabricante["nome"]?></td>
                 <td>
-                    <a href="atualizar.php?id=<?=$fabricante["id"]?>">Atualizar</a>  <!-- link dinâmico / link com parâmetros -->
-                    - <a href="excluir.php?id=<?=$fabricante["id"]?>">Excluir</a>
+                    <a class="btn btn-warning" href="atualizar.php?id=<?=$fabricante["id"]?>">Atualizar</a>  <!-- link dinâmico / link com parâmetros -->
+                    - <a class="btn btn-danger" href="excluir.php?id=<?=$fabricante["id"]?>">Excluir</a>
                 </td>
             </tr>
         <?php } ?>
